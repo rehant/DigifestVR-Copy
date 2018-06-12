@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: 66ec96e67b85b5647abdf13ed048f07c
+timeCreated: 1524549619
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Building01
+    100002: Building02
+    100004: Building03
+    100006: Building04
+    100008: Building05
+    100010: Building06
+    100012: Building07
+    100014: Building08
+    100016: Building09
+    100018: Building10
+    100020: JavaStoreBuilding
+    100022: //RootNode
+    100024: NellieJamesBuilding
+    100026: SideWalk
+    100028: VictorianHouse
+    400000: Building01
+    400002: Building02
+    400004: Building03
+    400006: Building04
+    400008: Building05
+    400010: Building06
+    400012: Building07
+    400014: Building08
+    400016: Building09
+    400018: Building10
+    400020: JavaStoreBuilding
+    400022: //RootNode
+    400024: NellieJamesBuilding
+    400026: SideWalk
+    400028: VictorianHouse
+    2300000: Building01
+    2300002: Building02
+    2300004: Building03
+    2300006: Building04
+    2300008: Building05
+    2300010: Building06
+    2300012: Building07
+    2300014: Building08
+    2300016: Building09
+    2300018: Building10
+    2300020: JavaStoreBuilding
+    2300022: NellieJamesBuilding
+    2300024: SideWalk
+    2300026: VictorianHouse
+    3300000: Building01
+    3300002: Building02
+    3300004: Building03
+    3300006: Building04
+    3300008: Building05
+    3300010: Building06
+    3300012: Building07
+    3300014: Building08
+    3300016: Building09
+    3300018: Building10
+    3300020: JavaStoreBuilding
+    3300022: NellieJamesBuilding
+    3300024: SideWalk
+    3300026: VictorianHouse
+    4300000: VictorianHouse
+    4300002: JavaStoreBuilding
+    4300004: NellieJamesBuilding
+    4300006: Building10
+    4300008: Building09
+    4300010: Building08
+    4300012: SideWalk
+    4300014: Building07
+    4300016: Building06
+    4300018: Building05
+    4300020: Building04
+    4300022: Building03
+    4300024: Building01
+    4300026: Building02
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
