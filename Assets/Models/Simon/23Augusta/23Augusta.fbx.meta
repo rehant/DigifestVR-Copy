@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: 6a87c3a9da826b5429b899401ff5e986
+timeCreated: 1532130725
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Camera
+    100004: Cube
+    100006: Cube.001
+    100008: Cube.002
+    100010: Lamp
+    100012: Plane
+    100014: Plane.001
+    100016: Plane.002
+    100018: Plane.003
+    100020: Plane.004
+    100022: Plane.005
+    100024: SketchUp
+    100026: SketchUp.001
+    100028: SketchUp.002
+    100030: SketchUp.003
+    100032: SketchUp.004
+    100034: SketchUp.005
+    100036: SketchUp.006
+    100038: SketchUp.007
+    100040: SketchUp.008
+    100042: skp_camera_Last_Saved_SketchUp_View
+    100044: The
+    400000: //RootNode
+    400002: Camera
+    400004: Cube
+    400006: Cube.001
+    400008: Cube.002
+    400010: Lamp
+    400012: Plane
+    400014: Plane.001
+    400016: Plane.002
+    400018: Plane.003
+    400020: Plane.004
+    400022: Plane.005
+    400024: SketchUp
+    400026: SketchUp.001
+    400028: SketchUp.002
+    400030: SketchUp.003
+    400032: SketchUp.004
+    400034: SketchUp.005
+    400036: SketchUp.006
+    400038: SketchUp.007
+    400040: SketchUp.008
+    400042: skp_camera_Last_Saved_SketchUp_View
+    400044: The
+    2300000: Cube
+    2300002: Cube.001
+    2300004: Cube.002
+    2300006: Plane
+    2300008: Plane.001
+    2300010: Plane.002
+    2300012: Plane.003
+    2300014: Plane.004
+    2300016: Plane.005
+    2300018: SketchUp
+    2300020: SketchUp.001
+    2300022: SketchUp.002
+    2300024: SketchUp.003
+    2300026: SketchUp.004
+    2300028: SketchUp.005
+    2300030: SketchUp.006
+    2300032: SketchUp.007
+    2300034: SketchUp.008
+    2300036: The
+    3300000: Cube
+    3300002: Cube.001
+    3300004: Cube.002
+    3300006: Plane
+    3300008: Plane.001
+    3300010: Plane.002
+    3300012: Plane.003
+    3300014: Plane.004
+    3300016: Plane.005
+    3300018: SketchUp
+    3300020: SketchUp.001
+    3300022: SketchUp.002
+    3300024: SketchUp.003
+    3300026: SketchUp.004
+    3300028: SketchUp.005
+    3300030: SketchUp.006
+    3300032: SketchUp.007
+    3300034: SketchUp.008
+    3300036: The
+    4300000: Cube.001
+    4300002: The
+    4300004: Plane.003
+    4300006: Cube
+    4300008: Plane
+    4300010: SketchUp.008
+    4300012: SketchUp.007
+    4300014: SketchUp.006
+    4300016: SketchUp.005
+    4300018: SketchUp.004
+    4300020: SketchUp.003
+    4300022: SketchUp.002
+    4300024: SketchUp.001
+    4300026: SketchUp
+    4300028: Plane.001
+    4300030: Plane.002
+    4300032: Plane.004
+    4300034: Plane.005
+    4300036: Cube.002
+    6400000: Cube
+    6400002: Cube.001
+    6400004: Cube.002
+    6400006: Plane
+    6400008: Plane.001
+    6400010: Plane.002
+    6400012: Plane.003
+    6400014: Plane.004
+    6400016: Plane.005
+    6400018: SketchUp
+    6400020: SketchUp.001
+    6400022: SketchUp.002
+    6400024: SketchUp.003
+    6400026: SketchUp.004
+    6400028: SketchUp.005
+    6400030: SketchUp.006
+    6400032: SketchUp.007
+    6400034: SketchUp.008
+    6400036: The
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
