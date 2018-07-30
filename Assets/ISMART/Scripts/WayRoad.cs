@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
-
+#endif
 public class WayRoad : MonoBehaviour {
 
 	public Color colorRoad = new Color(0,1,0, 0.5f);
@@ -32,7 +33,8 @@ public class WayRoad : MonoBehaviour {
 
 	}
 
-	void  OnDrawGizmos (){
+#if UNITY_EDITOR
+    void OnDrawGizmos (){
 
 		Transform[] waypoints = gameObject.GetComponentsInChildren<Transform>();
 
@@ -52,9 +54,10 @@ public class WayRoad : MonoBehaviour {
 
                     if (ShowLabels == true && i < waypoints.Length)
                         Handles.Label(waypoints[i].position, waypoints[i].gameObject.name);
+
                 }
-			
-	     }
+            }
        }
-	}
+    }
+#endif
 }

@@ -123,9 +123,10 @@ namespace PedestrianSystem{
 			//Setting Next Waypoints of Waypoints
 			waypointScript1.nextWaypoint = waypointObjects [0].GetComponent<Waypoint> ();
 			waypointScript2.nextWaypoint = waypointScript1;
+            waypointScript1.prevWaypoint = waypointScript2; // MODIFIED FOR MACGRID
 
-			//Setting Manager Waypoint
-			waypointScript1.manager = this;
+            //Setting Manager Waypoint
+            waypointScript1.manager = this;
 
 			//Addinng Waypoint to the list
 			waypointObjects.Add(obj);
@@ -144,8 +145,9 @@ namespace PedestrianSystem{
 				waypointObjects.RemoveAt (waypointObjects.Count-1);
 
 				waypointObjects [waypointObjects.Count-1].GetComponent<Waypoint> ().nextWaypoint = waypointObjects [0].GetComponent<Waypoint> ();
-			}
-		}
+                //TODO: NOT modified for macGRID because this is just really awful code. Rewrite in future
+            }
+        }
 
 
 	}

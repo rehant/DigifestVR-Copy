@@ -38,7 +38,9 @@ namespace PedestrianSystem
         private Transform m_RayPos; //The position to raycast from?
         [SerializeField]
         private Vector3 m_HitOff; //Hit offset; //The offset to go to
-        
+
+        private bool m_ReversePath = false; //Go backwards?
+
         //set animator value of pedestrian according to the state choosen
         void Start()
         {
@@ -137,9 +139,19 @@ namespace PedestrianSystem
             {
 
                 if (col.gameObject == target.gameObject)
-                    target = col.GetComponent<Waypoint>().GetNextWaypoint();
+                    target = col.GetComponent<Waypoint>().GetNextWaypoint(m_ReversePath);// MODIFIED FOR MACGRID
             }
         }
 
+        // MODIFIED FOR MACGRID
+        public void setBackwards(bool _tf)
+        {
+            m_ReversePath = _tf;
+        }
+
+        public bool getBackwards()
+        {
+            return m_ReversePath;
+        }
     }
 }

@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/VRSwapOnOff.unity
     guid: 6e66e160e48362245859f7e023d9f8a9
+  - enabled: 0
+    path: Assets/NONVRSwapOnOff.unity
+    guid: 626e1df919f11774398bda692d8f8b25
