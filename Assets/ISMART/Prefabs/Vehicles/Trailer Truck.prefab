@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 64758825335322822}
   m_Layer: 8
   m_Name: TruckChassis
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -677,7 +677,24 @@ MonoBehaviour:
     m_Bits: 4294967295
   Restart: 0
   StackTime: 10000
-  AngleStack: 0
+  power:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 5000
+      inSlope: 0
+      outSlope: -0.625
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 8000
+      value: 0
+      inSlope: -0.625
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   torque: 300
   maxSpeed: 100
   maxAngle: 45
@@ -686,18 +703,27 @@ MonoBehaviour:
   RaySize: 10
   RayAngle: 35
   BrakeLights: {fileID: 0}
+  m_Wheels: []
+  m_WheelMeshes: []
   wheelShape: {fileID: 1000010734295496, guid: 8a4e2f69ac0ecf242a1b727a7c204359, type: 2}
+  EngineAudio: {fileID: 0}
   Speed: 0
   angle: 0
+  MotorRPM: 0
   FindWaypoint: 1
   Waypoints: {fileID: 0}
   currentWaypoint: 0
   Parking: 0
   ParkingOnEnd: 0
-  PoliceLights: {fileID: 0}
-  Target: {fileID: 0}
-  ChaseRange: 25
-  EnemyRange: 0
+  policeAddons:
+    ChaseRange: 25
+    PoliceLights: {fileID: 0}
+    Target: {fileID: 0}
+    Target2: {fileID: 0}
+    EnemyRange: 0
+    Enemys: []
+    Enemys2: []
+    Chase: 0
 --- !u!146 &146046882768558430
 WheelCollider:
   m_ObjectHideFlags: 1
