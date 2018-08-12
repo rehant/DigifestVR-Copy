@@ -41,6 +41,20 @@ namespace PedestrianSystem
 
         private bool m_ReversePath = false; //Go backwards?
 
+        [SerializeField]
+        private bool m_CanGo = false; //Can we go right now?
+
+        [SerializeField]
+        private GameObject pedStop; //A pedestrian stopper
+
+        [SerializeField]
+        private bool overlapPedestrian = false; //Do we overlap pedestrian?
+
+        [SerializeField]
+        private List<Animator> m_Animators = new List<Animator>();
+        [SerializeField]
+        private List<Animation> m_Animations = new List<Animation>();
+
         //set animator value of pedestrian according to the state choosen
         void Start()
         {
@@ -80,6 +94,35 @@ namespace PedestrianSystem
                 targetRotation.x = 0; targetRotation.z = 0;
                 this.transform.rotation = Quaternion.Lerp(this.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
             }
+
+            if (pedStop != null && !pedStop.activeInHierarchy)
+            {
+                pedStop = null; //Done with it for now
+
+                foreach (Animator a in m_Animators)
+                {
+                    a.enabled = true;
+                }
+
+                foreach (Animation a in m_Animations)
+                {
+                    a.enabled = true;
+                }
+            }
+
+            if (pedStop != null)
+            {
+                foreach (Animator a in m_Animators)
+                {
+                    a.enabled = false;
+                }
+
+                foreach (Animation a in m_Animations)
+                {
+                    a.enabled = false;
+                }
+            }
+
         }
 
         //stay on the ground! MODIFIED FOR MACGRID
@@ -99,6 +142,27 @@ namespace PedestrianSystem
         //movement acfording to movement type
         void PedestrianMovement()
         {
+            //MODIFIED FOR MACGRID
+            if (pedStop != null && pedStop.activeInHierarchy) return; //Do nothing
+
+            //MODIFIED FOR MACGRID
+            if (overlapPedestrian && Random.Range(0.0f, 1000f) > 500f)
+            {
+                //Stutter, so that the eventually part ways
+                if (Random.Range(0f, 10f) < 9f)
+                {
+                    this.transform.position += this.transform.forward * Time.deltaTime * walkSpeed * 0.5f;
+                    if (m_RayHitGround) RayCastGround(); //MODIFIED FOR MACGRID
+                    return;
+                }
+                else
+                {
+                    //Try a step backwards
+                    this.transform.position -= this.transform.forward * Time.deltaTime * walkSpeed * 0.5f;
+                    if (m_RayHitGround) RayCastGround(); //MODIFIED FOR MACGRID
+                    return;
+                }
+            }
 
             switch (movementType)
             {
@@ -140,6 +204,32 @@ namespace PedestrianSystem
 
                 if (col.gameObject == target.gameObject)
                     target = col.GetComponent<Waypoint>().GetNextWaypoint(m_ReversePath);// MODIFIED FOR MACGRID
+            }
+
+            //MODIFIED FOR MACGRID
+            if (col.CompareTag("PedStop") && !m_ReversePath)
+            {
+                pedStop = col.gameObject;
+            }
+
+            if (col.CompareTag("PedStopB") && m_ReversePath)
+            {
+                pedStop = col.gameObject;
+            }
+
+            //MODIFIED FOR MACGRID
+            if (col.CompareTag("Pedestrian"))
+            {
+                overlapPedestrian = true;
+            }
+        }
+
+        //MODIFIED FOR MACGRID
+        public void OnTriggerExit(Collider col)
+        {
+            if (col.CompareTag("Pedestrian"))
+            {
+                overlapPedestrian = false; //Done overlapping
             }
         }
 

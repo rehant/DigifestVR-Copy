@@ -11,6 +11,8 @@ TagManager:
   - Way
   - W
   - Car
+  - PedStop
+  - PedStopB
   layers:
   - Default
   - TransparentFX
