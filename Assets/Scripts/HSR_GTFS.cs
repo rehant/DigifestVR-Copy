@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net;
+using System.IO;
 using UnityEngine.Networking;
 using UnityEngine;
 
 public class HSR_GTFS : MonoBehaviour 
 {
 	// URLs
-	private const string GTFSHamiltonURL = "http://opendata.hamilton.ca/GTFS-RT/";
-	private const string ServiceAlertsURL = "http://opendata.hamilton.ca/GTFS-RT/GTFS_ServiceAlerts.pb";				// URL for GTFS_ServiceAlerts.pb
-	private const string TripUpdatesURL = "http://opendata.hamilton.ca/GTFS-RT/GTFS_TripUpdates.pb";					// URL for GTFS_TripUpdates.pb
-	private const string VehiclePositionsURL = "http://opendata.hamilton.ca/GTFS-RT/GTFS_VehiclePositions.pb";			// URL for GTFS_VehiclePositions.pb
+	private const string _serviceAlertsURL = "http://opendata.hamilton.ca/GTFS-RT/GTFS_ServiceAlerts.pb";				// URL for GTFS_ServiceAlerts.pb
+	private const string _tripUpdatesURL = "http://opendata.hamilton.ca/GTFS-RT/GTFS_TripUpdates.pb";					// URL for GTFS_TripUpdates.pb
+	private const string _vehiclePositionsURL = "http://opendata.hamilton.ca/GTFS-RT/GTFS_VehiclePositions.pb";			// URL for GTFS_VehiclePositions.pb
+
+	// File Names
+	private const string _serviceAlerts = "GTFS_ServiceAlerts.pb";
+	private const string _tripUpdates = "GTFS_TripUpdates.pb";
+	private const string _vehiclePositions = "GTFS_VehiclePositions.pb";
 
 	// Use this for initialization
 	void Start () 
@@ -22,21 +28,20 @@ public class HSR_GTFS : MonoBehaviour
 	{
 		
 	}
-
+	 
 	IEnumerator GetData()
 	{
-		// Get data from GTFS directory on opendata.hamilton.ca for transit information
-		UnityWebRequest www1 = new UnityWebRequest (GTFSHamiltonURL);
-		www1.downloadHandler = new DownloadHandlerBuffer ();
-		yield return www1.Send ();
 
-		if (www1.isError) {
-			Debug.Log (www1.error);
-		} else {
-			Debug.Log (www1.downloadHandler.text);
-			byte[] GTFSHamilton = www1.downloadHandler.data;
-		}
+		// Get working game data directory to save files to
+		string dataFolder = Application.dataPath + @"/";
 
+		// Download data from GTFS directory on opendata.hamilton.ca locally for transit information
+		WebClient client = new WebClient ();
+		client.DownloadFile (_serviceAlertsURL, dataFolder + _serviceAlerts);
+		client.DownloadFile (_tripUpdatesURL, dataFolder + _tripUpdates);
+		client.DownloadFile (_vehiclePositionsURL, dataFolder + _vehiclePositions);
+
+		yield return null;
 	}
 
 }
