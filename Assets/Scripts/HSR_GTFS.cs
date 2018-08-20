@@ -34,6 +34,7 @@ public class HSR_GTFS : MonoBehaviour
 
 		// Get working game data directory to save files to
 		string dataFolder = Application.dataPath + @"/";
+		Debug.Log (dataFolder);
 
 		// Download data from GTFS directory on opendata.hamilton.ca locally for transit information
 		WebClient client = new WebClient ();
